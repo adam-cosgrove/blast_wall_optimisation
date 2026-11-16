@@ -19,10 +19,8 @@ Assumptions:
      where td(ms), x(m).
 -    Displacement is calculated using the analytical solution for an undamped SDOF system subjected to a linearly decaying load pulse:
 
-          for t ≤ td:
-            z(t) = Fpeak/k [1 − cos(ωt)] + Fpeak/(k·td) [sin(ωt)/ω − t]
-          for t > td:
-            z(t) = Fpeak/(kωtd) [sin(ωt) − sin(ω(t − td))] − Fpeak/k cos(ωt)
+            z(t) = Fpeak/k [1 − cos(ωt)] + Fpeak/(k·td) [sin(ωt)/ω − t] for t ≤ td
+            z(t) = Fpeak/(kωtd) [sin(ωt) − sin(ω(t − td))] − Fpeak/k cos(ωt) for t > td
      where z(m), Fpeak(N), k(N/m), td(s), t(s), ω = √(k/m)(rad/s).
 -    The wall is considered to fail if peak displacement exceeds 100 mm.
 -    Material non-linearity, cracking, yielding, permanent deformation and soil-structure interaction are not considered.
