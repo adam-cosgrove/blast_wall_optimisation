@@ -9,17 +9,21 @@ Assumptions:
 -    Mass and stiffness are represented by equivalent lumped parameters.
 -    Structural damping is neglected.
 -    The blast load is applied uniformly across the wall face.
--    Peak blast force varies with stand-off distance according to:
+-    Peak blast force  varies with stand-off distance according to:
   
-          Fpeak(x) = 1000 + 9x² − 183x (kN)
+          Fpeak(x) = 1000 + 9x² − 183x
+     where Fpeak (kN), x(m).
 -    Load duration varies with stand-off distance according to:
 
-          td(x) = 20 − 0.12x² + 4.2x (ms)
+          td(x) = 20 − 0.12x² + 4.2x
+     where td(ms), x(m).
 -    Displacement is calculated using the analytical solution for an undamped SDOF system subjected to a linearly decaying load pulse:
-  
-          z(t) = Fpeak/k [1 − cos(ωt)] + Fpeak/(k·td) [sin(ωt)/ω − t] for t ≤ td
-          z(t) = Fpeak/(kωtd) [sin(ωt) − sin(ω(t − td))] − Fpeak/k cos(ωt) for t > td
-          Where ω = √(k/m).
+
+          if t ≤ td:
+            z(t) = Fpeak/k [1 − cos(ωt)] + Fpeak/(k·td) [sin(ωt)/ω − t]
+          else:
+            z(t) = Fpeak/(kωtd) [sin(ωt) − sin(ω(t − td))] − Fpeak/k cos(ωt)
+     where z(m), Fpeak(N), k(N/m), td(s), t(s), ω = √(k/m)(rad/s).
 -    The wall is considered to fail if peak displacement exceeds 100 mm.
 -    Material non-linearity, cracking, yielding, permanent deformation and soil-structure interaction are not considered.
 -    The optimum solution is obtained within a discretised design space of stiffness and mass values.
@@ -29,6 +33,4 @@ Assumptions:
           Cm = 10m − 2000
           Cx = 2400(x²/4)
           C = Ck + Cm + Cx
-          Where k (MN/m), m (kg), and x (m).
-          
-    
+     where k(MN/m), m(kg), x(m).
