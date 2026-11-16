@@ -1,6 +1,6 @@
 Title: Blast Wall Optimisation
 
-Overview: This project was completed as a learning exercise during my time at The University of Sheffield. It models the dynamic response of a cantilevered blast wall subjected to a time-varying blast load. The program implements a bisector root finding algorithm to evaluate combinations of structural stiffness, mass, and stand-off distance to identify the lowest-cost design that satisfies a maximum allowable displacement.
+Overview: This project models the dynamic response of a cantilevered blast wall subjected to a time-varying blast load. The program implements a bisector root finding algorithm to evaluate combinations of structural stiffness, mass, and stand-off distance to identify the lowest-cost design that satisfies a maximum allowable displacement.
 
 Technologies: Python, Numpy, Matplotlib
 
